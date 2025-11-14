@@ -9,4 +9,5 @@ penguins |>
   filter(species == "Gentoo") |> 
   ggplot(aes(x = body_mass_g, y = bill_length_mm)) +
   geom_point() +
-  labs(x = "Body mass g", y = "Bill length mm", title = "Adelie")
+  geom_smooth(method = "lm") +
+  labs(x = "Body mass g", y = "Bill length mm", title = "Gentoo")
